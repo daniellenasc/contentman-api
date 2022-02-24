@@ -4,6 +4,9 @@ require("dotenv").config();
 //importar o express
 const express = require("express");
 
+//invocar a function connect do db.config (do mongoose)
+require("./config/db.config")();
+
 //criar o app
 const app = express();
 
