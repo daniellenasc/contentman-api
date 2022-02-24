@@ -10,6 +10,11 @@ const app = express();
 //configurar 
 app.use(express.json());
 
+//importar o contentRouter
+const contentRouter = require("./routes/content.routes");
+//toda rota "/content" que chegar, será encaminhada para contentRouter
+app.use("/content", contentRouter)
+
 
 //"porteiro" (a porta está definida no arquivo. env)
 app.listen(Number(process.env.PORT), () => {
