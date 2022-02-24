@@ -1,4 +1,4 @@
-//importar o dotenv (biblioteca de variáveis de ambiente - definidas no arquivo .env)
+//p/ usar a variável de ambiente: importar o dotenv (biblioteca de variáveis de ambiente - definidas no arquivo .env)
 require("dotenv").config();
 
 //importar o express
@@ -19,7 +19,7 @@ const contentRouter = require("./routes/content.routes");
 app.use("/content", contentRouter)
 
 
-//"porteiro" (a porta está definida no arquivo. env)
+//"porteiro": coloca o express para ouvir as requisições (a porta está definida no arquivo .env)
 app.listen(Number(process.env.PORT), () => {
     console.log(`Server up and running at port ${process.env.PORT}.`)
 })

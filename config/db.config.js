@@ -10,7 +10,7 @@ async function connect() {
 
         //para se conectar ao banco de dados através do mongoose, usando o método do próprio mongoose
         //método .connect(1ª PARÂMETRO:endereço do banco de dados, 2º PARÂMETRO: objeto de configuração)
-        //o endereço do banco de dados será uma variável de ambiente no .env (MONGODB_URI=mongodb://localhost:27017/contentman-api)
+        //o endereço do banco de dados será uma variável de ambiente no .env (MONGODB_URI=mongodb://localhost:27017/contentman-api) -> COM O NOME DA API!
         //o objeto de configuração, já foi passado como uma "default", das configurações do mongoose, mas algumas coisas precisam ser ajustadas!
         const connection = await mongoose.connect(process.env.MONGODB_URI);
         console.log("Connected do DB:", connection.connection.name)
